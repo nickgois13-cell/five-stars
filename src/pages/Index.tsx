@@ -1,16 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import ProductsSection from "@/components/ProductsSection";
+import DifferentialsSection from "@/components/DifferentialsSection";
+import ReviewsSection from "@/components/ReviewsSection";
+import AboutSection from "@/components/AboutSection";
+import Footer from "@/components/Footer";
+import CartSidebar from "@/components/CartSidebar";
+import { useCart } from "@/hooks/useCart";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const { items, isOpen, setIsOpen, addItem, removeItem, updateQuantity, total, count } = useCart();
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen">
+      <Navbar cartCount={count} onCartClick={() => setIsOpen(true)} />
+      <HeroSection />
+      <ProductsSection onAddToCart={addItem} />
+      <DifferentialsSection />
+      <ReviewsSection />
+      <AboutSection />
+      <Footer />
+      <CartSidebar
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        items={items}
+        total={total}
+        onUpdateQuantity={updateQuantity}
+        onRemove={removeItem}
+      />
+
+      {/* Fixed cart button */}
+      {count > 0 && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-6 right-6 z-40 btn-primary-custom shadow-2xl gap-2 animate-scale-in"
+        >
+          Finalizar Compra ({count})
+        </button>
+      )}
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
