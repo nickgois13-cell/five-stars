@@ -100,7 +100,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
   };
 
   return (
-    <section id="cardapio" className="py-24 bg-cream-gradient">
+    <section id="cardapio" className="py-24 bg-[#f5e6d3]">
       <div ref={sectionRef} className="container mx-auto px-4 section-reveal">
         <div className="text-center mb-12">
           <p className="font-cursive text-gold text-2xl mb-2">Nosso Cardápio</p>
