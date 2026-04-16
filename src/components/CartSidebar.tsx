@@ -1,4 +1,4 @@
-import { X, Minus, Plus, ShoppingBag } from "lucide-react";
+import { X, Minus, Plus, ShoppingBag, MessageCircle } from "lucide-react";
 import type { CartItem } from "@/hooks/useCart";
 
 interface CartSidebarProps {
@@ -11,9 +11,12 @@ interface CartSidebarProps {
 }
 
 const CartSidebar = ({ isOpen, onClose, items, total, onUpdateQuantity, onRemove }: CartSidebarProps) => {
+  const whatsappMessage = items.length > 0
+    ? `Olá! Gostaria de fazer um pedido:%0A%0A${items.map((i) => `• ${i.quantity}x ${i.name} - R$${(i.price * i.quantity).toFixed(2).replace(".", ",")}`).join("%0A")}%0A%0ATotal: R$${total.toFixed(2).replace(".", ",")}` 
+    : "";
+
   return (
     <>
-      {/* Backdrop */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-foreground/30 backdrop-blur-sm z-50 animate-fade-in"
@@ -21,13 +24,11 @@ const CartSidebar = ({ isOpen, onClose, items, total, onUpdateQuantity, onRemove
         />
       )}
 
-      {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-full max-w-md bg-card z-50 shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-border">
           <div className="flex items-center gap-3">
             <ShoppingBag className="w-5 h-5 text-foreground" />
@@ -41,7 +42,6 @@ const CartSidebar = ({ isOpen, onClose, items, total, onUpdateQuantity, onRemove
           </button>
         </div>
 
-        {/* Items */}
         <div className="flex-1 overflow-y-auto p-6 space-y-4">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
@@ -93,17 +93,25 @@ const CartSidebar = ({ isOpen, onClose, items, total, onUpdateQuantity, onRemove
           )}
         </div>
 
-        {/* Footer */}
         {items.length > 0 && (
-          <div className="p-6 border-t border-border space-y-4">
+          <div className="p-6 border-t border-border space-y-3">
             <div className="flex justify-between items-center">
               <span className="font-body text-muted-foreground">Total</span>
               <span className="font-heading text-2xl font-bold text-foreground">
                 R${total.toFixed(2).replace(".", ",")}
               </span>
             </div>
-            <button className="w-full btn-primary-custom justify-center">
-              Finalizar Compra
+            <a
+              href={`https://wa.me/5514991447877?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full btn-primary-custom justify-center gap-2"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Finalizar via WhatsApp
+            </a>
+            <button className="w-full btn-outline-custom justify-center text-xs">
+              Pagar com Pix / Cartão
             </button>
             <p className="text-center text-xs text-muted-foreground font-body">
               Aceitamos Pix, cartão de crédito e débito

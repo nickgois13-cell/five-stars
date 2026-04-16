@@ -4,6 +4,7 @@ import ProductsSection from "@/components/ProductsSection";
 import DifferentialsSection from "@/components/DifferentialsSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import AboutSection from "@/components/AboutSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import CartSidebar from "@/components/CartSidebar";
 import { useCart } from "@/hooks/useCart";
@@ -19,6 +20,7 @@ const Index = () => {
       <DifferentialsSection />
       <ReviewsSection />
       <AboutSection />
+      <FAQSection />
       <Footer />
       <CartSidebar
         isOpen={isOpen}
@@ -29,7 +31,6 @@ const Index = () => {
         onRemove={removeItem}
       />
 
-      {/* Fixed cart button */}
       {count > 0 && (
         <button
           onClick={() => setIsOpen(true)}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -81,6 +81,10 @@
   .bg-cream-gradient {
     background: linear-gradient(180deg, hsl(var(--cream)) 0%, hsl(var(--background)) 100%);
   }
+
+  .font-cursive {
+    font-family: 'Dancing Script', cursive;
+  }
 }
 
 @layer components {
@@ -126,5 +130,10 @@
   .btn-outline-custom:hover {
     background: hsl(var(--chocolate));
     color: hsl(var(--primary-foreground));
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md border border-border/30;
+    background: hsl(var(--card) / 0.8);
   }
 }

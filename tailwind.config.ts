@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Playfair Display"', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+        body: ['Poppins', 'sans-serif'],
+        cursive: ['"Dancing Script"', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -114,6 +115,14 @@ export default {
           "0%, 100%": { transform: "scale(1)" },
           "50%": { transform: "scale(1.2)" },
         },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--gold) / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(var(--gold) / 0.6)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -125,6 +134,8 @@ export default {
         "slide-out-right": "slide-out-right 0.3s ease-out",
         "float": "float 3s ease-in-out infinite",
         "cart-bounce": "cart-bounce 0.3s ease-out",
+        "shimmer": "shimmer 2s linear infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
   },
