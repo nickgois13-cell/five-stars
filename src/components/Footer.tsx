@@ -57,7 +57,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-cream/10">
           <p className="font-body text-xs text-cream/40">
-            © {new Date().getFullYear()} Five Stars Brownies & Trufas. Todos os direitos reservados.
+            © {new Date().getFullYear()} Five Stars. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-4">
             <a
@@ -69,12 +69,11 @@ const Footer = () => {
               <Instagram className="w-5 h-5" />
             </a>
             <a
-              href="https://wa.me/5514991447877"
+             
               target="_blank"
               rel="noopener noreferrer"
               className="text-cream/40 hover:text-gold transition-colors duration-300 font-body text-sm"
             >
-              WhatsApp
             </a>
           </div>
         </div>
