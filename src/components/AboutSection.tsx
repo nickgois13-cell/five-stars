@@ -15,7 +15,7 @@ const AboutSection = () => {
           
           <div className="flex justify-center gap-1 mb-8">
             {[1, 2, 3, 4, 5].map((i) => (
-              <Star key={i} className="w-5 h-5 text-[#f3e7d3] fill-[#f3e7d3]" />
+              <Star key={i} className="w-5 h-5 text-gold fill-gold" />
             ))}
           </div>
 
@@ -31,7 +31,7 @@ const AboutSection = () => {
           </p>
 
           <div className="inline-flex items-center gap-2 text-white font-body font-medium">
-            <Heart className="w-5 h-5 text-[#f3e7d3] fill-[#f3e7d3]" />
+            <Heart className="w-5 h-5 text-gold fill-gold" />
             <span>Feito com amor em Agudos, SP</span>
           </div>
         </div>
