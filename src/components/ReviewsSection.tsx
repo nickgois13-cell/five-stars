@@ -40,7 +40,7 @@ const ReviewsSection = () => {
               key={i}
               className="bg-[#f6eddc]/90 p-6 rounded-2xl border border-[#e9d9c0]/80 hover-lift group relative"
             >
-              <Quote className="w-8 h-8 text-[#6d4c41] absolute top-4 right-4 group-hover:text-[#4e342e] transition-colors duration-500" />
+              <Quote className="w-8 h-8 text-[#6d4c41] absolute top-4 right-4 group-hover:text-[#6d4c41] transition-colors duration-500" />
               <div className="flex mb-3">
                 {Array.from({ length: 5 }).map((_, s) => (
                   <Star
