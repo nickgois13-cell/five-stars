@@ -38,7 +38,7 @@ const ReviewsSection = () => {
           {reviews.map((r, i) => (
             <div
               key={i}
-              className="bg-[#6d4c41]/90 p-6 rounded-2xl border border-[#a1887f]/40 hover-lift group relative"
+              className="bg-[#ddcdb2]/90 p-6 rounded-2xl border border-[#c4ab86]/40 hover-lift group relative"
             >
               <Quote className="w-8 h-8 text-gold/35 absolute top-4 right-4 group-hover:text-gold/60 transition-colors duration-500" />
               <div className="flex mb-3">
