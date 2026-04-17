@@ -15,7 +15,7 @@ interface SectionDividerProps {
 const SectionDivider = ({
   from = "transparent",
   to = "transparent",
-  height = "h-6 md:h-8",
+  height = "h-4 md:h-6",
   className = "",
 }: SectionDividerProps) => {
   return (
