@@ -130,7 +130,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
           {filtered.map((product, i) => (
             <div
               key={product.id}
-              className="group bg-card rounded-2xl overflow-hidden shadow-sm hover-lift border border-border/50 transition-all duration-500"
+              className="group bg-[#fff8f0] rounded-2xl overflow-hidden shadow-[0_4px_20px_-8px_rgba(62,39,35,0.15)] hover:shadow-[0_20px_40px_-12px_rgba(62,39,35,0.25)] hover-lift border border-[#e9d9c0] transition-all duration-500"
               style={{ animationDelay: `${i * 0.08}s` }}
             >
               <div className="relative overflow-hidden aspect-square bg-secondary">
