@@ -133,7 +133,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
               className="group bg-[#fff8f0] rounded-2xl overflow-hidden shadow-[0_4px_20px_-8px_rgba(62,39,35,0.15)] hover:shadow-[0_20px_40px_-12px_rgba(62,39,35,0.25)] hover-lift border border-[#e9d9c0] transition-all duration-500"
               style={{ animationDelay: `${i * 0.08}s` }}
             >
-              <div className="relative overflow-hidden aspect-square bg-secondary">
+              <div className="relative overflow-hidden aspect-[3/2] bg-[#f5e6d3]">
                 <img
                   src={product.image}
                   alt={product.name}
