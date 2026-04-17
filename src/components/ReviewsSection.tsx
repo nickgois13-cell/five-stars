@@ -16,7 +16,7 @@ const ReviewsSection = () => {
   const ref = useScrollReveal();
 
   return (
-    <section id="avaliacoes" className="py-24 bg-[#f9f5e6]">
+    <section id="avaliacoes" className="py-24 bg-[#f5e6d3]">
       <div ref={ref} className="container mx-auto px-4 section-reveal">
         <div className="text-center mb-16">
           <p className="font-cursive text-gold text-2xl mb-2">Avaliações</p>
