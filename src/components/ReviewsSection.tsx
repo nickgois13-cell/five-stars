@@ -23,14 +23,14 @@ const ReviewsSection = () => {
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-6">
             O que nossos clientes dizem
           </h2>
-          <div className="flex items-center justify-center gap-3 bg-[#f3d36a]/20 p-4 rounded-2xl inline-flex border border-[#d9b45a]">
+          <div className="flex items-center justify-center gap-3 bg-[#fff8f0] p-4 px-6 rounded-2xl inline-flex border border-[#d9b45a] shadow-[0_8px_24px_-8px_rgba(217,180,90,0.35)]">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((s) => (
-                <Star key={s} className="w-6 h-6 text-gold fill-gold" />
+                <Star key={s} className="w-6 h-6 text-gold fill-gold drop-shadow-sm" />
               ))}
             </div>
-            <span className="font-heading text-2xl font-bold text-foreground">{avg}</span>
-            <span className="text-muted-foreground text-sm font-body">/ 5 ({reviews.length} avaliações)</span>
+            <span className="font-heading text-2xl font-bold text-[#3e2723]">{avg}</span>
+            <span className="text-[#5d4037] text-sm font-body">/ 5 ({reviews.length} avaliações)</span>
           </div>
         </div>
 
