@@ -23,7 +23,7 @@ const ReviewsSection = () => {
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-6">
             O que nossos clientes dizem
           </h2>
-          <div className="flex items-center justify-center gap-3 bg-[#f0cf5a]/70 p-4 rounded-2xl inline-flex border border-[#d9b45a]">
+          <div className="flex items-center justify-center gap-3 bg-[#f0cf5a]/50 p-4 rounded-2xl inline-flex border border-[#d9b45a]">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((s) => (
                 <Star key={s} className="w-6 h-6 text-gold fill-gold" />
