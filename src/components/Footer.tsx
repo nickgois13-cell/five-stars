@@ -2,7 +2,7 @@ import { Instagram, Star, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-chocolate-dark py-16">
+    <footer classname="bg-[#2a1a17] py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -22,9 +22,7 @@ const Footer = () => {
               Produtos
             </h4>
             <ul className="space-y-2 font-body text-sm text-cream/60">
-              <li><a href="#cardapio" className="hover:text-gold transition-colors">Brownie Clássico</a></li>
-              <li><a href="#cardapio" className="hover:text-gold transition-colors">Brownie de Brigadeiro</a></li>
-              <li><a href="#cardapio" className="hover:text-gold transition-colors">Brownie de Ninho</a></li>
+              <li><a href="#cardapio" className="hover:text-gold transition-colors">Brownies</a></li>
               <li><a href="#cardapio" className="hover:text-gold transition-colors">Trufas</a></li>
             </ul>
           </div>
