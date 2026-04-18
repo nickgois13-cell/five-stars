@@ -14,7 +14,7 @@ const products = [
   {
     id: "classico",
     name: "Brownie Clássico",
-    price: 3.5,
+    price: 7.5,
     description: "Chocolate intenso com textura perfeita — crocante por fora, molhadinho por dentro.",
     image: "https://i.postimg.cc/bNNQTK5k/Brownie-Tradicional.webp",
     category: "brownies" as const,
@@ -22,7 +22,7 @@ const products = [
   {
     id: "brigadeiro",
     name: "Brownie de Brigadeiro",
-    price: 4.0,
+    price: 12,
     description: "A combinação perfeita do brownie com o sabor irresistível do brigadeiro brasileiro.",
     image: "https://i.postimg.cc/8PPhHqYf/Brownie-Brigadeiro.jpg",
     category: "brownies" as const,
@@ -30,7 +30,7 @@ const products = [
   {
     id: "ninho",
     name: "Brownie de Ninho",
-    price: 4.5,
+    price: 14,
     description: "Cobertura cremosa de leite ninho sobre o nosso brownie artesanal — pura indulgência.",
     image: brownieNinho,
     category: "brownies" as const,
@@ -38,7 +38,7 @@ const products = [
   {
     id: "ninho-nutella",
     name: "Brownie Ninho c/ Nutella",
-    price: 5.5,
+    price: 15,
     description: "O encontro perfeito: creme de ninho, Nutella e brownie de chocolate.",
     image: brownieNinhoNutella,
     category: "brownies" as const,
@@ -46,7 +46,7 @@ const products = [
   {
     id: "trufa-simples",
     name: "Trufa Simples",
-    price: 3.5,
+    price: 7.5,
     description: "Trufa clássica de chocolate — cremosa, intensa e irresistível.",
     image: "https://i.postimg.cc/3JJgBPqv/Trufa-Tradicional.jpg",
     category: "trufas" as const,
@@ -54,7 +54,7 @@ const products = [
   {
     id: "trufa-ninho",
     name: "Trufa de Ninho",
-    price: 4.5,
+    price: 14,
     description: "Trufa coberta com leite ninho — doçura cremosa que derrete na boca.",
     image: "https://i.postimg.cc/yYYFPwGF/Trufa-Leite-Ninho.jpg",
     category: "trufas" as const,
@@ -62,7 +62,7 @@ const products = [
   {
     id: "trufa-ninho-nutella",
     name: "Trufa Ninho c/ Nutella",
-    price: 5.5,
+    price: 15,
     description: "Trufa com recheio de Nutella e cobertura de ninho — combinação premium.",
     image: "https://i.postimg.cc/SsBp2YDz/Trufa-Ninho-Nutella.jpg",
     category: "trufas" as const,
