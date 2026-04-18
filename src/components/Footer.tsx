@@ -22,8 +22,17 @@ const Footer = () => {
               Produtos
             </h4>
             <ul className="space-y-2 font-body text-sm text-cream/60">
-              <li><a href="#cardapio" className="hover:text-gold transition-colors">Brownies</a></li>
-              <li><a href="#cardapio" className="hover:text-gold transition-colors">Trufas</a></li>
+              <li>
+  <a href="/#cardapio?categoria=brownies" className="hover:text-gold transition-colors">
+    Brownies
+  </a>
+</li>
+
+<li>
+  <a href="/#cardapio?categoria=trufas" className="hover:text-gold transition-colors">
+    Trufas
+  </a>
+</li>
             </ul>
           </div>
 
