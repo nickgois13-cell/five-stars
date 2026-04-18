@@ -4,7 +4,7 @@ import { Plus, Check } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import type { CartItem } from "@/hooks/useCart";
 
-// Seus imports de imagens locais
+// Seus imports de imagens
 import brownieNinho from "@/assets/brownie-ninho.jpg";
 import brownieNinhoNutella from "@/assets/brownie-ninho-nutella.jpg";
 
@@ -81,7 +81,7 @@ interface ProductsSectionProps {
 
 const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
   const sectionRef = useScrollReveal();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams(); // Adicionamos o "set" aqui
   const [activeCategory, setActiveCategory] = useState<Category>("todos");
   const [addedIds, setAddedIds] = useState<Set<string>>(new Set());
 
@@ -91,14 +91,17 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
     if (categoryFromUrl && ["todos", "brownies", "trufas"].includes(categoryFromUrl)) {
       setActiveCategory(categoryFromUrl);
       
-      // Só faz scroll se o usuário clicou em um link que contém o hash #cardapio
-      // Isso evita o scroll automático ao apenas atualizar a página no topo
+      // Se tiver o hash #cardapio, significa que ACABAMOS de clicar no link
       if (window.location.hash === "#cardapio") {
         const element = document.getElementById("cardapio");
         if (element) {
           setTimeout(() => {
             element.scrollIntoView({ behavior: "smooth" });
-          }, 100);
+            
+            // A MÁGICA: Removemos o hash da URL depois que o scroll aconteceu.
+            // Assim, se você der F5, o navegador não terá mais o gatilho do scroll.
+            window.history.replaceState(null, "", window.location.pathname + window.location.search);
+          }, 150);
         }
       }
     }
@@ -137,7 +140,11 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
             {categories.map((cat) => (
               <button
                 key={cat.key}
-                onClick={() => setActiveCategory(cat.key)}
+                onClick={() => {
+                   setActiveCategory(cat.key);
+                   // Quando clica manualmente, removemos os filtros da URL para ficar limpo
+                   setSearchParams({});
+                }}
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === cat.key
                     ? "bg-primary text-primary-foreground shadow-lg"
