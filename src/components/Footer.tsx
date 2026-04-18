@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Instagram, Star, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -22,17 +23,16 @@ const Footer = () => {
               Produtos
             </h4>
             <ul className="space-y-2 font-body text-sm text-cream/60">
-<li>
-  <Link to="/?categoria=brownies#cardapio" className="hover:text-gold transition-colors">
-    Brownies
-  </Link>
-</li>
-
-<li>
-  <Link to="/?categoria=trufas#cardapio" className="hover:text-gold transition-colors">
-    Trufas
-  </Link>
-</li>
+              <li>
+                <Link to="/?categoria=brownies#cardapio" className="hover:text-gold transition-colors">
+                  Brownies
+                </Link>
+              </li>
+              <li>
+                <Link to="/?categoria=trufas#cardapio" className="hover:text-gold transition-colors">
+                  Trufas
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -71,16 +71,10 @@ const Footer = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cream/40 hover:text-gold transition-colors duration-300"
+              className="flex items-center gap-2 text-cream/40 hover:text-gold transition-colors duration-300"
             >
-              
-            </a>
-            <a
-             
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cream/40 hover:text-gold transition-colors duration-300 font-body text-sm"
-            >
+              <Instagram className="w-5 h-5" />
+              <span className="font-body text-sm">Instagram</span>
             </a>
           </div>
         </div>
