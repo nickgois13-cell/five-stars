@@ -160,17 +160,16 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
               const isActive = activeCategory === category.key;
 
               return (
-                <button
-                  key={category.key}
-                  onClick={() => handleCategoryChange(category.key)}
-                  className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                    isActive
-                      ? "bg-primary text-primary-foreground shadow-lg"
-                      : "bg-secondary text-muted-foreground hover:bg-secondary/80"
-                  }`}
-                >
-                  {category.label}
-                </button>
+             <button
+  onClick={() => handleAdd(product)}
+  className={`px-4 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-[1.02] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+    added
+      ? "bg-green-600 text-white"
+      : "bg-primary text-primary-foreground hover:shadow-lg"
+  }`}
+>
+  {added ? "Adicionado" : "Quero esse"}
+</button>
               );
             })}
           </div>
