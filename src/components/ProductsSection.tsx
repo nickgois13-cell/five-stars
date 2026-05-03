@@ -5,6 +5,9 @@ import type { CartItem } from "@/hooks/useCart";
 
 import brownieNinho from "@/assets/brownie-ninho.jpg";
 import brownieNinhoNutella from "@/assets/brownie-ninho-nutella.jpg";
+import trufaSimples from "@/assets/trufa-simples.jpg";
+import trufaNinho from "@/assets/trufa-ninho.jpg";
+import trufaNinhoNutella from "@/assets/trufa-ninho-nutella.jpg";
 
 type Category = "todos" | "brownies" | "trufas";
 
@@ -57,7 +60,7 @@ const products: Product[] = [
     name: "Trufa Simples",
     price: 7.5,
     description: "Trufa clássica de chocolate — cremosa, intensa e irresistível.",
-    image: "https://i.postimg.cc/3JJgBPqv/Trufa-Tradicional.jpg",
+    image: trufaSimples,
     category: "trufas",
   },
   {
@@ -65,7 +68,7 @@ const products: Product[] = [
     name: "Trufa de Ninho",
     price: 14,
     description: "Trufa coberta com leite ninho — doçura cremosa que derrete na boca.",
-    image: "https://i.postimg.cc/yYYFPwGF/Trufa-Leite-Ninho.jpg",
+    image: trufaNinho,
     category: "trufas",
   },
   {
@@ -73,7 +76,7 @@ const products: Product[] = [
     name: "Trufa Ninho c/ Nutella",
     price: 15,
     description: "Trufa com recheio de Nutella e cobertura de ninho — combinação premium.",
-    image: "https://i.postimg.cc/SsBp2YDz/Trufa-Ninho-Nutella.jpg",
+    image: trufaNinhoNutella,
     category: "trufas",
   },
 ];
