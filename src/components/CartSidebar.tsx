@@ -19,14 +19,14 @@ const CartSidebar = ({
   onRemove,
 }: CartSidebarProps) => {
   const whatsappText =
-    items.length > 0
-      ? `Olá! Quero fazer um pedido da Five Stars 🍫\n\n${items
-          .map(
-            (i) =>
-              `• ${i.quantity}x ${i.name} - R$${(i.price * i.quantity).toFixed(2).replace(".", ",")}`,
-          )
-          .join("\n")}\n\nTotal: R$${total.toFixed(2).replace(".", ",")}'
-      : "";
+  items.length > 0
+    ? `Olá! Quero fazer um pedido da Five Stars 🍫\n\n${items
+        .map(
+          (i) =>
+            `• ${i.quantity}x ${i.name} - R$${(i.price * i.quantity).toFixed(2).replace(".", ",")}`,
+        )
+        .join("\n")}\n\nTotal: R$${total.toFixed(2).replace(".", ",")}`
+    : "";
 
   const whatsappHref =
     items.length > 0
