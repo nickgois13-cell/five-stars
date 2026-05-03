@@ -43,4 +43,4 @@ export function useCart() {
   const count = items.reduce((sum, i) => sum + i.quantity, 0);
 
   return { items, isOpen, setIsOpen, addItem, removeItem, updateQuantity, total, count };
-}
+    }
