@@ -25,7 +25,7 @@ const CartSidebar = ({
             (i) =>
               `• ${i.quantity}x ${i.name} - R$${(i.price * i.quantity).toFixed(2).replace(".", ",")}`,
           )
-          .join("\n")}\n\nTotal: R$${total.toFixed(2).replace(".", ",")}\n\n🔥 Pode me confirmar disponibilidade?`
+          .join("\n")}\n\nTotal: R$${total.toFixed(2).replace(".", ",")}'
       : "";
 
   const whatsappHref =
