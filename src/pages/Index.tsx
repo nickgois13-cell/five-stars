@@ -17,24 +17,19 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar cartCount={count} onCartClick={() => setIsOpen(true)} />
       <HeroSection />
-      {/* Hero (#3e2723-ish) → Produtos (#f5e6d3) */}
       <SectionDivider from="#3e2723" to="#f5e6d3" />
       <ProductsSection onAddToCart={addItem} />
-      {/* Produtos (#f5e6d3) → Diferenciais (chocolate gradient) */}
       <SectionDivider from="#f5e6d3" to="#3e2723" />
       <DifferentialsSection />
-      {/* Diferenciais (#3e2723) → Avaliações (#f9f5e6) */}
       <SectionDivider from="#3e2723" to="#f5e6d3" />
       <ReviewsSection />
-      {/* Avaliações (#f9f5e6) → Sobre (#5d4037) */}
       <SectionDivider from="#f5e6d3" to="#3e2723" />
       <AboutSection />
-      {/* Sobre (#5d4037) → FAQ (#f5e6d3) */}
       <SectionDivider from="#3e2723" to="#f5e6d3" />
       <FAQSection />
-      {/* FAQ (#f5e6d3) → Footer (dark) */}
       <SectionDivider from="#f5e6d3" to="#3e2723" />
       <Footer />
+
       <CartSidebar
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
@@ -46,8 +41,9 @@ const Index = () => {
 
       {count > 0 && (
         <button
+          type="button"
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-40 btn-primary-custom shadow-2xl gap-2 animate-scale-in"
+          className="fixed bottom-6 right-6 z-[70] rounded-full bg-primary px-5 py-3 text-white shadow-2xl"
         >
           Finalizar Compra ({count})
         </button>
