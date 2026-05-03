@@ -23,12 +23,12 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 font-body text-sm text-cream/60">
               <li>
-                <a href="#cardapio" className="hover:text-gold transition-colors">
+                <a href="/?categoria=brownies#cardapio" className="hover:text-gold transition-colors">
                   Brownies
                 </a>
               </li>
               <li>
-                <a href="#cardapio" className="hover:text-gold transition-colors">
+                <a href="/?categoria=trufas#cardapio" className="hover:text-gold transition-colors">
                   Trufas
                 </a>
               </li>
@@ -61,6 +61,17 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center gap-2">
+                <Instagram className="w-4 h-4 text-gold" />
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-gold" />
                 <span>Agudos, SP</span>
               </li>
@@ -73,17 +84,6 @@ const Footer = () => {
             © {new Date().getFullYear()} Five Stars. Todos os direitos reservados.
           </p>
 
-          <div className="flex items-center gap-4">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-cream/40 hover:text-gold transition-colors duration-300"
-            >
-              <Instagram className="w-5 h-5" />
-              <span className="font-body text-sm">Instagram</span>
-            </a>
-          </div>
         </div>
       </div>
     </footer>
