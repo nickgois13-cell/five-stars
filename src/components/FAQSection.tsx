@@ -48,9 +48,9 @@ const FAQSection = () => {
              <AccordionItem
   key={i}
   value={`item-${i}`}
-  className="rounded-2xl overflow-hidden border border-[#e9d9c0] bg-[#fff8f0] shadow-[0_4px_20px_-8px_rgba(62,39,35,0.1)] hover:shadow-[0_12px_30px_-10px_rgba(62,39,35,0.25)] hover:border-[#d9b45a] hover:bg-[#fdf3e3] transition-all duration-300 ease-out"
+  className="rounded-2xl overflow-hidden border border-[#e9d9c0] bg-[#fff8f0] shadow-[0_4px_20px_-8px_rgba(62,39,35,0.1)] hover:shadow-[0_12px_30px_-10px_rgba(224,123,31,0.3)] hover:border-[#e07b1f] hover:bg-[#fdf0e0] transition-all duration-300 ease-out"
 >
-  <AccordionTrigger className="bg-transparent font-heading font-semibold text-[#3e2723] text-left hover:no-underline hover:text-[#d9b45a] active:text-[#b8932f] active:scale-[0.99] transition-all duration-300 ease-out py-5 px-6 [&[data-state=open]]:text-[#d9b45a]">
+  <AccordionTrigger className="bg-transparent font-heading font-semibold text-[#3e2723] text-left hover:no-underline hover:text-[#e07b1f] active:text-[#b85a14] active:scale-[0.99] transition-all duration-300 ease-out py-5 px-6 [&[data-state=open]]:text-[#e07b1f]">
     {faq.q}
   </AccordionTrigger>
 
