@@ -1,6 +1,19 @@
 import { Instagram, Star, Mail, Phone, MapPin } from "lucide-react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const [, setSearchParams] = useSearchParams();
+
+  const goToCategory = (e: React.MouseEvent, categoria: "brownies" | "trufas") => {
+    e.preventDefault();
+    setSearchParams({ categoria }, { replace: false });
+    navigate(`/?categoria=${categoria}#cardapio`, { replace: false });
+    requestAnimationFrame(() => {
+      document.getElementById("cardapio")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
+
   return (
     <footer className="bg-[#2a1a17] py-16">
       <div className="container mx-auto px-4">
