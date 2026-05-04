@@ -186,11 +186,16 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {filteredProducts.map((product, index) => {
             const added = addedIds.has(product.id);
+            const outOfStock = product.badge === "Fora de estoque";
 
             return (
               <div
                 key={product.id}
-                className="group bg-[#fff8f0] rounded-2xl overflow-hidden shadow-[0_4px_20px_-8px_rgba(62,39,35,0.15)] hover:shadow-[0_20px_40px_-12px_rgba(62,39,35,0.25)] border border-[#e9d9c0] transition-all duration-500 hover:-translate-y-1"
+                className={`group bg-[#fff8f0] rounded-2xl overflow-hidden shadow-[0_4px_20px_-8px_rgba(62,39,35,0.15)] border border-[#e9d9c0] transition-all duration-500 ${
+                  outOfStock
+                    ? "opacity-60 grayscale-[20%]"
+                    : "hover:shadow-[0_20px_40px_-12px_rgba(62,39,35,0.25)] hover:-translate-y-1"
+                }`}
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
                 <div className="relative overflow-hidden aspect-[3/2] bg-[#f5e6d3]">
