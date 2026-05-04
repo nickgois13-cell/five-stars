@@ -253,14 +253,18 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
                     </span>
 
                     <button
-                      onClick={() => handleAdd(product)}
+                      onClick={() => !outOfStock && handleAdd(product)}
+                      disabled={outOfStock}
+                      aria-disabled={outOfStock}
                       className={`px-4 py-2 rounded-full font-semibold text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                        added
+                        outOfStock
+                          ? "bg-muted text-muted-foreground cursor-not-allowed"
+                          : added
                           ? "bg-green-600 text-white"
                           : "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg"
                       }`}
                     >
-                      {added ? "Adicionado" : "Quero esse"}
+                      {outOfStock ? "Indisponível" : added ? "Adicionado" : "Quero esse"}
                     </button>
                   </div>
                 </div>
