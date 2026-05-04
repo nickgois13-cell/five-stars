@@ -6,8 +6,8 @@ import type { CartItem } from "@/hooks/useCart";
 import brownieNinho from "@/assets/brownie-ninho.jpg";
 import brownieNinhoNutella from "@/assets/brownie-ninho-nutella.jpg";
 import trufaSimples from "@/assets/trufa-simples.jpg";
-import brownieNinho from "@/assets/trufa-ninho.jpg";
-import brownieNinho from "@/assets/trufa-ninho-nutella.jpg";
+import trufaNinho from "@/assets/trufa-ninho.jpg";
+import trufaNinhoNutella from "@/assets/trufa-ninho-nutella.jpg";
 
 type Category = "todos" | "brownies" | "trufas";
 
