@@ -220,16 +220,20 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
 
                   <div className="absolute inset-0 bg-chocolate-dark/0 group-hover:bg-chocolate-dark/20 transition-colors duration-500" />
 
-                  <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-chocolate-dark/80 to-transparent opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  <div className={`absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-chocolate-dark/80 to-transparent transition-all duration-300 ${outOfStock ? "opacity-0 pointer-events-none" : "opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"}`}>
                     <button
-                      onClick={() => handleAdd(product)}
+                      onClick={() => !outOfStock && handleAdd(product)}
+                      disabled={outOfStock}
+                      aria-disabled={outOfStock}
                       className={`w-full py-2.5 rounded-full font-semibold text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
-                        added
+                        outOfStock
+                          ? "bg-muted text-muted-foreground cursor-not-allowed"
+                          : added
                           ? "bg-green-600 text-white"
                           : "bg-primary text-primary-foreground hover:bg-primary/90"
                       }`}
                     >
-                      {added ? "Adicionado" : "Quero esse"}
+                      {outOfStock ? "Indisponível" : added ? "Adicionado" : "Quero esse"}
                     </button>
                   </div>
                 </div>
