@@ -6,8 +6,8 @@ import type { CartItem } from "@/hooks/useCart";
 import brownieNinho from "@/assets/brownie-ninho.jpg";
 import brownieNinhoNutella from "@/assets/brownie-ninho-nutella.jpg";
 import trufaSimples from "@/assets/trufa-simples.jpg";
-import trufaNinho from "@/assets/trufa-ninho.jpg";
-import trufaNinhoNutella from "@/assets/trufa-ninho-nutella.jpg";
+import brownieNinho from "@/assets/trufa-ninho.jpg";
+import brownieNinho from "@/assets/trufa-ninho-nutella.jpg";
 
 type Category = "todos" | "brownies" | "trufas";
 
@@ -62,6 +62,7 @@ const products: Product[] = [
     description: "Trufa clássica de chocolate — cremosa, intensa e irresistível.",
     image: trufaSimples,
     category: "trufas",
+    badge: "Fora de estoque",
   },
   {
     id: "trufa-ninho",
@@ -70,6 +71,7 @@ const products: Product[] = [
     description: "Trufa coberta com leite ninho — doçura cremosa que derrete na boca.",
     image: trufaNinho,
     category: "trufas",
+    badge: "Fora de estoque",
   },
   {
     id: "trufa-ninho-nutella",
@@ -78,6 +80,7 @@ const products: Product[] = [
     description: "Trufa com recheio de Nutella e cobertura de ninho — combinação premium.",
     image: trufaNinhoNutella,
     category: "trufas",
+    badge: "Fora de estoque",
   },
 ];
 
@@ -192,7 +195,13 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
               >
                 <div className="relative overflow-hidden aspect-[3/2] bg-[#f5e6d3]">
                   {"badge" in product && product.badge && (
-                    <span className="absolute top-3 left-3 z-10 bg-gold text-chocolate-dark text-xs px-3 py-1 rounded-full font-semibold shadow-md">
+                    <span
+                      className={`absolute top-3 left-3 z-10 text-xs px-3 py-1 rounded-full font-semibold shadow-md ${
+                        product.badge === "Fora de estoque"
+                          ? "bg-red-600 text-white"
+                          : "bg-gold text-chocolate-dark"
+                      }`}
+                    >
                       {product.badge}
                     </span>
                   )}
