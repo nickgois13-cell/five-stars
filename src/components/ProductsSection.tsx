@@ -193,7 +193,7 @@ const ProductsSection = ({ onAddToCart }: ProductsSectionProps) => {
                 key={product.id}
                 className={`group bg-[#fff8f0] rounded-2xl overflow-hidden shadow-[0_4px_20px_-8px_rgba(62,39,35,0.15)] border border-[#e9d9c0] transition-all duration-500 ${
                   outOfStock
-                    ? "opacity-80 grayscale-[20%]"
+                    ? "opacity-90 grayscale-[20%]"
                     : "hover:shadow-[0_20px_40px_-12px_rgba(62,39,35,0.25)] hover:-translate-y-1"
                 }`}
                 style={{ animationDelay: `${index * 0.08}s` }}
