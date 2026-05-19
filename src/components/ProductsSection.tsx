@@ -25,7 +25,7 @@ const products: Product[] = [
   {
     id: "classico",
     name: "Brownie Clássico",
-    price: 7.5,
+    price: 7,
     description: "Chocolate intenso com textura perfeita — crocante por fora, molhadinho por dentro.",
     image: "https://i.postimg.cc/bNNQTK5k/Brownie-Tradicional.webp",
     category: "brownies",
@@ -33,7 +33,7 @@ const products: Product[] = [
   {
     id: "brigadeiro",
     name: "Brownie de Brigadeiro",
-    price: 12,
+    price: 10,
     description: "A combinação perfeita do brownie com o sabor irresistível do brigadeiro brasileiro.",
     image: "https://i.postimg.cc/8PPhHqYf/Brownie-Brigadeiro.jpg",
     category: "brownies",
@@ -41,7 +41,7 @@ const products: Product[] = [
   {
     id: "ninho",
     name: "Brownie de Ninho",
-    price: 14,
+    price: 10,
     description: "Cobertura cremosa de leite ninho sobre o nosso brownie artesanal — pura indulgência.",
     image: brownieNinho,
     category: "brownies",
@@ -49,7 +49,7 @@ const products: Product[] = [
   {
     id: "ninho-nutella",
     name: "Brownie Ninho c/ Nutella",
-    price: 15,
+    price: 12,
     description: "O encontro perfeito: creme de ninho, Nutella e brownie de chocolate.",
     image: brownieNinhoNutella,
     category: "brownies",
@@ -58,7 +58,7 @@ const products: Product[] = [
   {
     id: "trufa-simples",
     name: "Trufa Simples",
-    price: 7.5,
+    price: 7,
     description: "Trufa clássica de chocolate — cremosa, intensa e irresistível.",
     image: trufaSimples,
     category: "trufas",
@@ -67,7 +67,7 @@ const products: Product[] = [
   {
     id: "trufa-ninho",
     name: "Trufa de Ninho",
-    price: 14,
+    price: 10,
     description: "Trufa coberta com leite ninho — doçura cremosa que derrete na boca.",
     image: trufaNinho,
     category: "trufas",
@@ -76,7 +76,7 @@ const products: Product[] = [
   {
     id: "trufa-ninho-nutella",
     name: "Trufa Ninho c/ Nutella",
-    price: 15,
+    price: 12,
     description: "Trufa com recheio de Nutella e cobertura de ninho — combinação premium.",
     image: trufaNinhoNutella,
     category: "trufas",
