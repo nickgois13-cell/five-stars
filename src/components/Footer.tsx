@@ -76,7 +76,7 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Instagram className="w-4 h-4 text-gold" />
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/five.stars2026"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gold transition-colors"
