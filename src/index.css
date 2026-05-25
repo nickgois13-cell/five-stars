@@ -137,3 +137,11 @@
     background: hsl(var(--card) / 0.8);
   }
 }
+
+@media (pointer: fine) and (min-width: 768px) {
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
